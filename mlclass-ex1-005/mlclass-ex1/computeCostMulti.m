@@ -14,7 +14,9 @@ J = 0;
 %               You should set J to the cost.
 
 
-
+ diff = (X * theta) - y;
+ transDiff = diff';
+ J = (1.0/(2.0 * m))*transDiff*diff;
 
 
 % =========================================================================
