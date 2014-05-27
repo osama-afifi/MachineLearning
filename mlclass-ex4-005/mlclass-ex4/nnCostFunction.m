@@ -102,7 +102,7 @@ for t = 1:m;
 endfor
 
 % Step 5 - Averaging the Deltas 
-Theta1_grad = (1/m) * Delta1;
+Theta1_grad = (1/m) * Delta1; 
 Theta2_grad = (1/m) * Delta2;
 
 %%%%%%%%%%%%%%%%%%%%%5
@@ -114,6 +114,7 @@ Theta2_grad = (1/m) * Delta2;
 %               and Theta2_grad from Part 2.
 %
 
+% Regularzation of gradients
 Theta1_grad(:,2:end) = Theta1_grad(:,2:end) + ((lambda / m) * modifiedTheta1);
 Theta2_grad(:,2:end) = Theta2_grad(:,2:end) + ((lambda / m) * modifiedTheta2);
 
