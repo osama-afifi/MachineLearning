@@ -25,28 +25,26 @@ sigma = 0.3;
 
 
 trials = [0.01, 0.03, 0.1, 0.3, 1.0, 3.0, 10.0, 30.0];
-incrementC = trials;
-incrementSigma = trials;
 
 iteration = 1;
-bestPrediction = 0;
-for CTrial = incrementC;
-	for sigmaTrial = incrementSigma;
+bestPrediction = 1; % Worsr Case
+for CTrial = trials
+	for sigmaTrial = trials
 			fprintf(['Trial #%d: C = %f, sigma = %f\n'], iteration, CTrial, sigmaTrial);
 			iteration = iteration + 1;
 			model = svmTrain(X, y, CTrial, @(x1, x2) gaussianKernel(x1, x2, sigmaTrial)); % Train an SVM Model (get Theta)
 			predictions = svmPredict(model, Xval); % Compute Predictions based on thr Model
 			predictionsError = mean(double(predictions ~= yval)); % Compute Error with the CrossValidation data
 			fprintf(['Error is  %f\n'], predictionsError);
-			if(predictionsError > bestPrediction)
-				fprintf(['Best so far %f\n'], predictionsError);
+			if(predictionsError < bestPrediction)
+				fprintf(['Current Best Prediction Error %f\n'], predictionsError);
 				bestPrediction = predictionsError;
 				sigma = sigmaTrial;
 				C = CTrial;
 			end;
 	end;
 end;
-fprintf(['\nBest Error Prediction  %f, Best Sigma is %f, Best C Value is %f\n'], bestPrediction, sigma, C);
+fprintf(['\nBest Error Prediction  %f\n Best Sigma Value is %f\n Best C Value is %f\n'], bestPrediction, sigma, C);
 
 % =========================================================================
 
