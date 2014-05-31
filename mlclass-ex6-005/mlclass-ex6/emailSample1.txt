@@ -1,10 +1,8 @@
-> Anyone knows how much it costs to host a web portal ?
->
-Well, it depends on how many visitors you're expecting.
-This can be anywhere from less than 10 bucks a month to a couple of $100. 
-You should checkout http://www.rackspace.com/ or perhaps Amazon EC2 
-if youre running something big..
-
-To unsubscribe yourself from this mailing list, send an email to:
-groupname-unsubscribe@egroups.com
-
+Osama,
+The Microsoft Students to Business Program (S2B) is retiring on June 30, 2014. Until that time you will have access to your resume and other personal data that you've stored on the S2B website. After June 30, 2014, you will no longer be able to access the S2B website or any of your content or data stored on the S2B website.
+To access your data, please visit the Students to Business website, sign in to your account, and click on "Download My Profile" on the right side of the page.
+If you uploaded a resume or curriculum vitae to the site you may download that by signing in to your account, clicking on "Edit My Profile," and selecting your document from under the "Attachments" section.
+For questions related to the S2B program retirement, please contact s2b_help@microsoft.com.
+To find training on Microsoft technologies, visit the Microsoft Virtual Academy website.
+Thank you,
+The Microsoft Students to Business team
